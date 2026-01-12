@@ -4,16 +4,16 @@ This repository serves as a hub for my engineering and fabrication projects.
 
 ## Focus Areas
 - Parametric CAD (Fusion 360)
-- 3D printing & enclosure design
+- 3D printing & enclosure design 
 - Design iteration and tolerance analysis
 - Clear technical documentation
 
 ## Featured Projects
-### 🔹 3D Printed Enclosure (Neptune 4)
+### 🔹 3D Printed Enclosure
 Design and iteration of a snap-fit enclosure with emphasis on tolerances and print behavior.  
 → 
 
-### 🔹 Keychain Design
+### 🔹 3D Printed Keychain Design
 Small-scale functional print focused on geometry, aesthetics, and usability.  
 → 
 
