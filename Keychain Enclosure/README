@@ -7,4 +7,28 @@ The aim of this project was to develop and print a snap fit enclosure for my key
 The aim of this project was to develop and print a snap fit enclosure for my keychain prototypes. This was my first time developing and printing a snap-fit enclosure,so I wanted the enclosure to serve a specific purpose, while also not being unnecessarily large. At the same time, I wanted to challenge myself, so I sought to design a slot designated for the keychain to rest in. 
 
 ## Process ##
---v.1 model--
+To better understand what to take into account while developing the enclosure, I referenced a tutorial:
+→ https://www.youtube.com/watch?v=HcLT5Hz9-mk&t=318s
+
+## Notes ##
+# v.1.0 #
+→ The dock designed to store the keychain within the enclosure was not big enough for the keychain to fit, leading me to offset it in v.1.1. 
+>> I did not print the lid of v.1.0 because of the keychain not being able to fit. To me, that took higher precedent as my objective was for both criteria to be met: the keychain must fit, and the snap - fit mechanism must work. 
+
+# v.1.1 #
+→ I offsetted the sketch for the dock by .2mm providing enough clearnace for the print to fit. 
+→ The internal corners of the lid needed to be filleted in order for the lid to fit the body of v.1.1.. Since the corners of the lid were sharper than the inner corners of the body of the enclosure, the lid was unable to fit inside the box. Despite that issue, however, the lid was able to fit the body of v.1.0. 
+→ I also wanted the lid to be shelled to save filament while printing it. 
+→ While printing the lid, I noticed that the layers at the top of the lid fused with the bottom layers in a slanted angle. 
+
+# v.1.2 # 
+→ For this model, I designed a new lid from scratch, as I found that editing the previous lid to be too time-consuming and timeline-complex for my current capacity.
+→ Boundary sketch was offsetted by .6mm to provide clearance between the inner part of the lid and the body of the enclosure. 
+→ Lid was shelled with a thickness of 1.6mm. 
+→ Shared the same issue as the lid of v.1.1 while printing. While troubleshooting this issue I understood that the top surface flow rate was too high for the extruder, so I reduced it from 100% → 95%. 
+
+
+
+
+
+
