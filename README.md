@@ -6,7 +6,7 @@ This repository serves as a hub for my engineering and fabrication projects.
 - Parametric CAD (Fusion 360)
 - 3D printing & enclosure design
 - Design iteration and tolerance analysis
-- Clear technical documentation
+- Clear technical documentatio
 
 ## Featured Projects
 ### 🔹 3D Printed Enclosure (Neptune 4)
