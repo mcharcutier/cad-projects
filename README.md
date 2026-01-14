@@ -11,18 +11,15 @@ This repository serves as a hub for my engineering and fabrication projects.
 ## Featured Projects
 ### 🔹 3D Printed Enclosure
 Design and iteration of a snap-fit enclosure with emphasis on tolerances and print behavior.  
-→ 
 
 ### 🔹 3D Printed Keychain Design
 Small-scale functional print focused on geometry, aesthetics, and usability.  
-→ 
 
 *(More projects will be added as I continue building.)*
 
 ## Tools & Technologies
 - Fusion 360
 - FDM 3D Printing (Elegoo Neptune 4)
-- Git & GitHub
 - PLA / basic materials testing
 
 ## Documentation Philosophy
