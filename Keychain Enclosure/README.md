@@ -7,7 +7,7 @@ The aim of this project was to develop and print a snap fit enclosure for my key
 Design a compact snap-fit enclosure that securely houses a keychain while incorporating a centered docking slot, balancing print reliability, fit tolerance, and material efficiency. 
 
 ## **Success Criteria**
-→ Keychain fits securely in dock without force.
+→ Keychain fits securely in the internal pocket without force.
 
 → Lid snaps on/off without permanent deformation.
 
@@ -25,11 +25,11 @@ To better understand what to take into account while developing the enclosure, I
 ## **Notes**
 
 ### *v.1.0* 
-→ The dock designed to store the keychain within the enclosure was not big enough for the keychain to fit, leading me to offset it in v.1.1. 
->> I did not print the lid of v.1.0 because of the keychain not being able to fit. To me, that took higher precedent as my objective was for both criteria to be met: the keychain must fit, and the snap - fit mechanism must work. 
+→ The internal pocket designed to store the keychain within the enclosure was not big enough for the keychain to fit, leading me to offset it in v.1.1. 
+>> I did not print the lid of v.1.0 because of the keychain not being able to fit inside the pocket. To me, that took higher precedent as my objective was for both criteria to be met: the keychain must fit within the pocket, as well as the snap - fit mechanism being able to work. 
 
 ### *v.1.1*
-→ I offsetted the sketch for the dock by .2mm providing enough clearance for the print to fit. 
+→ I offsetted the sketch for the internal pocket by .2mm providing enough clearance for the print to fit. 
 
 → The internal corners of the lid needed to be filleted in order for the lid to fit the body of v.1.1. 
 >> Since the corners of the lid were sharper than the inner corners of the body of the enclosure, the lid was unable to fit inside the box. Despite that issue, however, the lid was able to fit the body of v.1.0. 
@@ -41,7 +41,7 @@ To better understand what to take into account while developing the enclosure, I
 ### *v.1.2* 
 → For this model, I designed a new lid from scratch, as I found that editing the previous lid to be too time-consuming and timeline-complex for my current capacity.
 
-→ Boundary sketch was offsetted by .6mm to provide clearance between the inner part of the lid and the body of the enclosure. 
+→ Boundary sketch of the inner feature of the lid was offsetted by .6mm to provide clearance between the inner part of the lid and the body of the enclosure. 
 
 → Lid was shelled with a thickness of 1.6mm. 
 
