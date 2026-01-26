@@ -4,11 +4,18 @@
 The aim of this project was to develop and print a snap fit enclosure for my keychain prototypes. 
 
 ## Goal ##
-The aim of this project was to develop and print a snap fit enclosure for my keychain prototypes. This was my first time developing and printing a snap-fit enclosure,so I wanted the enclosure to serve a specific purpose, while also not being unnecessarily large. At the same time, I wanted to challenge myself, so I sought to design a slot designated for the keychain to rest in. 
+Design a compact snap-fit enclosure that securely houses a keychain while incorporating a centered docking slot, balancing print reliability, fit tolerance, and material efficiency. 
+
+--Success Criteria --
+Keychain fits securely in dock without force
+Lid snaps on/off without permanent deformation
+Lid and body assemble without interference
+Print completes without layer fusion or deformation
 
 ## Process ##
-To better understand what to take into account while developing the enclosure, I referenced a tutorial:
+To better understand what to take into account while developing the enclosure, I referenced a tutorial to make the snap fit feature. 
 → https://www.youtube.com/watch?v=HcLT5Hz9-mk&t=318s
+- I imported the keychain for which I wanted the enclosure to house. I constrained the dimensions of the enclosure around the keychain, wanting the dock to be at the center of the enclosure. 
 
 ## Notes ##
 # v.1.0 #
@@ -25,10 +32,17 @@ To better understand what to take into account while developing the enclosure, I
 → For this model, I designed a new lid from scratch, as I found that editing the previous lid to be too time-consuming and timeline-complex for my current capacity.
 → Boundary sketch was offsetted by .6mm to provide clearance between the inner part of the lid and the body of the enclosure. 
 → Lid was shelled with a thickness of 1.6mm. 
-→ Shared the same issue as the lid of v.1.1 while printing. While troubleshooting this issue I understood that the top surface flow rate was too high for the extruder, so I reduced it from 100% → 95%. 
+→ Shared the same issue as the lid of v.1.1 while printing. While troubleshooting this issue I understood that the top surface flow rate was too high for the extruder.
 
+Manufacturing Notes
+Printed in PLA on Neptune 4
+Layer fusion at lid interface traced to excessive top surface flow rate
+Geometry was sound; issue was slicer/material tuning rather than CAD error
 
-
+Next Steps
+Reprint lid with corrected top surface flow rate (100% → 95%)
+Convert lid and body into separate components for assembly validation
+Apply snap-fit learnings to a larger functional enclosure
 
 
 
