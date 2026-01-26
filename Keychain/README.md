@@ -5,7 +5,9 @@ The aim of this project was to design a functional keychain prototype that explo
 
 ## **Success Criteria**
 → The loop of the keychain must be able to fit standard keyrings.
+
 → The keychain must be able to withstand normal handling without the layers separating. 
+
 → The keychain must be able to comfortably rest in one hand, with its overall dimensions constrainted to fit within a standard adult palm. 
 
 ## **Process**
