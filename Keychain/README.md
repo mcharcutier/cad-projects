@@ -80,7 +80,3 @@ For my keychain, I referenced the image below for its simplicity and for my inte
 ## **Next Steps**
 
 → Introduce user-defined parameters to control overall size, loop thickness, and base depth to improve parametric flexibility. 
-
-→ Explore strength and failure awareness through applying twisting force, pulling force, and simulated pocket movement. 
-
->> Look for layer separation, deformation at loop, cracks near sharp transitions. 
