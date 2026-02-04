@@ -66,7 +66,7 @@ For my keychain, I referenced the image below for its simplicity and for my inte
 
 >> Troubleshooting indicated that the issue may be that the filament is too hot to use after staying at 205℃ for too long, so I let the printer rest before I continued printing.
 
-→ 2/3: I aimed to perfect the print before I moved on to other projects. Through tedious trial and error, as well as a lot of stringing and cold pulls, I determined that a Z-offset of -1.050 would be ideal position for the nozzle. I also preheated the filament to 140℃ before beginning to print the keychain. The result was the smoothest bottom layer that I have ever achieved out of all of my prints. 
+→ 2/3: I aimed to perfect the print before I moved on to other projects. Through tedious trial and error, as well as a lot of stringing and cold pulls, I determined that a Z-offset of -1.050 would be ideal position for the nozzle. I also preheated the filament to 140℃ rather than letting it fully rest before beginning to print the keychain. The result was the smoothest bottom layer that I have ever achieved out of all of my prints. 
 
 
 ## **Manufacturing Notes**
