@@ -7,11 +7,11 @@ The aim of this project was to develop and print a snap fit enclosure for my key
 Design a compact snap-fit enclosure that securely houses a keychain while incorporating a centered docking slot, balancing print reliability, fit tolerance, and material efficiency. 
 
 ## **Success Criteria**
-→ Keychain fits securely in the internal pocket without force.
+→ Keychain fits securely in the internal pocket with a clearance of at least .2mm. 
 
 → Lid snaps on/off without permanent deformation.
 
-→ Lid and body assemble without interference.
+→ Lid and body assemble with the assistance of the snap fit mechanism; clearance of at least .4mm present in between the mechanism. 
 
 → Print completes without layer fusion or deformation.
 
@@ -25,16 +25,14 @@ To better understand what to take into account while developing the enclosure, I
 ## **Notes**
 
 ### *v.1.0* 
-→ The internal pocket designed to store the keychain within the enclosure was not big enough for the keychain to fit, leading me to offset it in v.1.1. 
->> I did not print the lid of v.1.0 because of the keychain not being able to fit inside the pocket. To me, that took higher precedent as my objective was for both criteria to be met: the keychain must fit within the pocket, as well as the snap - fit mechanism being able to work. 
+→ The internal pocket within the enclosure did not have enough clearance for the keychain to fit. 
+>> I did not print the lid of v.1.0 because of the keychain not being able to fit inside the pocket. The design intent behind the enclosure was that the keychain must fit, and the snap fit mechanism must work. 
 
 ### *v.1.1*
 → I offsetted the sketch for the internal pocket by .2mm providing enough clearance for the print to fit. 
 
 → The internal corners of the lid needed to be filleted in order for the lid to fit the body of v.1.1. 
 >> Since the corners of the lid were sharper than the inner corners of the body of the enclosure, the lid was unable to fit inside the box. Despite that issue, however, the lid was able to fit the body of v.1.0. 
-
-→ I also wanted the lid to be shelled to save filament while printing it. 
 
 → While printing the lid, I noticed that the top surface layers fused with lower layers at an angle - indicating excessive material flow or the extruder at a higher temperature than necessary - rather than a geometric interference. 
 
