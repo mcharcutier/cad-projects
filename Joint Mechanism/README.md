@@ -1,4 +1,4 @@
-#**Joint Mechanism V.1**
+# **Joint Mechanism V.1**
 
 ## **Overview**
 
