@@ -27,9 +27,13 @@ To better understand how to refine my design, I researched the necessary math/ph
 → Torque = mass x gravitational force x radius. It's important to reduce the torque induced by gravity. Some methods to reduce include:
 
 >> Making the forearm shorter.
+>> 
 >> Making the forearm lighter
+>> 
 >> Centralize the mass near the radius
+>> 
 >> Add mass to the base
+>> 
 >> Keep the hardware near the joints
 
 >> Include a defined friction choice to introudce torque induced by friction to counter the torque induced by gravity. 
