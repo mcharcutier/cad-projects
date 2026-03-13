@@ -38,8 +38,6 @@ For this project, I chose to reference and anglepoise lamp joint mechanism, espe
 
 The joint utilizes a spring mechanism to balance the torque against gravity. Gravitational torque changes with angle, making the arms want to droop. By balancing the torque induced by gravity, the arm "floats," preventing sudden jerks, making the relative position of the joint mechanism stable regardless of the angle. 
 
-To better understand how to refine my design, I researched the necessary math/physics concepts, such as torque and center of mass (COM). 
-
 While printing the components, I ran out of my regular filament, requiring me to learn to work with matte PLA, which is known for being more brittle and requires a higher temperature than regular PLA to properly utilize it. 
 
 ### **Printer Calibration Setup**
@@ -72,30 +70,45 @@ While printing the components, I ran out of my regular filament, requiring me to
 
 ## **Engineering Considerations**
 → Matte PLA works better at 215℃, compared to 205℃ for most regular PLA. 
+
 → The Z-offset for Matte PLA needs to be closer to the nozzle, as first-layer bed adhesion can prove to be difficult with Matte PLA. 
 
+→ FDM printing typically produces undersized holes due to material shrinkage.
+
+→ Additional clearance was included in pivot holes to compensate for this behavior.
+
+→ Washer recesses were designed to provide flat bearing surfaces and reduce plastic-on-plastic wear.
+
+→ Joint tolerances were selected to balance two competing requirements:
+
+> smooth articulation.
+   
+> sufficient friction to resist gravitational torque.
+  
 ## **Testing and Observations**
 
 ### **V.0.0** 
 → Incorrect offset caused poor first-layer adhesion. 
 
-→ While slicing, I uncovered that printing the entire design without scaling will:
->  Not fit on the bed
+→ Full Assembly Print:
+>  Exceeds build plate dimensions
 > 
 > ~400g of filament, ~12 hours to complete printing
 > 
-> Potential fusing of surfaces
+> Potential fusing of surfaces if clearance is insufficient. 
 > 
 > Would need to reprint the entire assembly if an iteration is unsuccessful.
 
-→ Print by component:
+→ Component - Based Printing:
 > Will fit on the bed (excluding the Body-Base 2 due to the legs. The height can be reduced for it to properly print within the bounds of the printer.
 >
 > Will require more filament, but shorter print duration
 >
-> Can print replacement components if damaged or ineffective to the design intent. 
+> Can print replacement components if damaged or ineffective to the design intent.
 
-→ [Standing Arm - Leg Peg]:
+### **Clearance Dimensions**:
+
+→ Standing Arm - Leg Peg:
 > Peg ⌀ = 12mm
 > 
 > Peg Hole ⌀ = 12.2mm
@@ -106,7 +119,7 @@ While printing the components, I ran out of my regular filament, requiring me to
 > 
 >> Improved rotational clearance, taking into account of PLA tolerance of ± 0.02mm.
 
-→ [Joint - Peg]:
+→ Joint - Peg:
 > Peg ⌀ = 9.90mm
 >
 > Hole ⌀ = 10.30mm
@@ -115,7 +128,9 @@ While printing the components, I ran out of my regular filament, requiring me to
 > 
 > Washer Seat Outer ⌀ = 20.70mm
 >
->> Improved rotational clearance, taking into account of PLA tolerance of ± 0.02mm.
+> Clearance added to account for FDM hole shrinkage and dimensional variation.
+> 
+>> Designed clearance: ~0.2–0.4 mm.
 
 ## **Manufacturing Notes**
 → Pivot holes designed with +0.6 mm clearance to compensate for FDM hole shrinkage. 
@@ -134,6 +149,9 @@ leading to poor first-layer adhesion.
 > Soft resistance, paper moves slowly, nozzle doesn't catch/tear it. 
 
 ## **Next Steps**
+→ Print and assemble the first full iteration of the joint. 
+
+
 → Explore taking the joint to the next level. 
 > Next iteration should involve electronics, involve calculations stemming from conceptual understanding (torque, forward kinematics).
 > 
