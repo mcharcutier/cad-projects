@@ -14,13 +14,12 @@ This project aims to design a rotational joint mechanism inspired by an anglepoi
 
 → Avoids permanent deformation under expected loads.
 
-
 ## **Success Criteria**
 
 → The mechanism must hold its position at any angle between 0° and 90°
 without external support.
 
-→ Printed pivot holes must be within ±0.2 - ±0.5 mm of the intended diameter.
+→ Printed pivot holes must be within ±0.3 mm of the intended diameter.
 
 → All components must assemble using only the printed parts and washers,
 with no post-processing required.
@@ -36,14 +35,9 @@ lateral play during joint rotation.
 ### **Conceptual Understanding**
 For this project, I chose to reference and anglepoise lamp joint mechanism, especially with the joint and the base of the system. The base allows the joint to move 360° equatorially. 
 
-The joint utilizes a spring mechanism to balance the torque against gravity. Gravitational torque changes with angle, making the arms want to droop. By balancing the torque induced by gravity, the arm "floats," preventing sudden jerks, making the relative position of the joint mechanism stable regardless of the angle. 
+The anglepoint lamp joint typically utilizes a spring mechanism to balance the torque against gravity. Gravitational torque changes with angle, making the arms want to droop. By balancing the torque induced by gravity, the arm "floats," preventing sudden jerks, making the relative position of the joint mechanism stable regardless of the angle. 
 
 While printing the components, I ran out of my regular filament, requiring me to learn to work with matte PLA, which is known for being more brittle and requires a higher temperature than regular PLA to properly utilize it. 
-
-### **Printer Calibration Setup**
-→ For regular PLA, it should feel as if the nozzle is lightly brushing the paper. 
-
-→ For Matte PLA, the Z-offset should be lower to compensate for the filament's higher viscosity and ensuring that it sticks.
  
 ### **Main Takeaways**
 → Keep the COM closer to the base to prevent the joint from tipping over. 
@@ -60,7 +54,11 @@ While printing the components, I ran out of my regular filament, requiring me to
 >> 
 >> Keep the hardware near the joints.
 >> 
->> Include a defined friction choice to introduce the frictional torque necessary to counter the torque induced by gravity. 
+>> Include a defined friction choice to introduce the frictional torque necessary to counter the torque induced by gravity.
+>>
+>>> Torque Diagram for Joint Mechanism V.0.0:
+>>>
+>>> ![Torque Diagram](https://lh3.googleusercontent.com/pw/AP1GczOynABUa4iG_9C2Ob-RuM1pa7uXCRt8OL37TbrRjl4ywPgIRnwrh7BqfuXTu6UBwI-1w-WC_i272KuDoxIVmmGhnTHAHbvi8gjv4uTzVpc8iihWe8MAbBqhpp4RZYqTHzLDkYqYHmSce3kZHhtd6YJHkUBPkAOVchjREj9d4dGW6TFweoO9xWcncR_cQFAMIE9bGIiPhqc1Sj4loTCWKy0fPY6y--0V8ZaWHlCydX3PPVnWnKDhHj6nhBBWFfy40IpSwdMyFhqjX1fwkB5bPsC1LsBWW1BJRQTCuZLqWlV3wBgnA64KuKkqEJp-LhoZpMsaxgzyQHS3qcTUhjpWhFkANh9PPf2NUMc4jqA3IiTvVkueaQNu1wMrcojYO80gXCRuSkNTAXBjLlRE4CmYA-uixQvX4KgroZzI692i38abNY2P49U6bFhTTno3r9yNAXFPc0Osge3ahXK7AfJWogCh85Nq7OYX53sL0B-V8pRtaCQ2TnfMC4zVHzcLzKuBX3Ac2PUGLajuE_xt0XLkuHJ8GB9FEBIile2_yd4kZgDnF6DQLCv6k00UcQc3ixlNAT7MRlyTMU-TeMdE7TXbvc1utE2ns_tSNgGDqBdxHd94i6e1qaCiNGJZA_VyxWd8yFZFo5iJ2JPRe1LRqrQ3F1YyzkfPb0RWLrT6N091WXBz_hZ09JJTOQGBFwabJkeymlnbd7p4squRTWyRyFPM9pT9ii9wjLO_m9gQpe3-7k8ym2wWUPwxBUzBp5hj8iq2Z20nRpTSJZLkY-R5gJmq6lHL3NaTN1ze5_kdhttZoX4mlJ8gVctxgxCdqQkyF3-d3hydOV72tpw5rL-rWVl0WCS_CGDihoc0tRt3bnwTnk2YWuvwHnrxupDnqjHhvtCrWp0U31nhTovhPROna_mcbzI28UM5IqCIyvRSg6_5rZwwHfgIY3HaTwt8-w=w1474-h1966-s-no?authuser=0)
 
 ### **Expected Assembly Steps**
 1. Insert pivot pins into base joints.
@@ -109,31 +107,39 @@ While printing the components, I ran out of my regular filament, requiring me to
 ### **Clearance Dimensions**:
 
 → Standing Arm - Leg Peg:
+
+<img width="1315" height="790" alt="image" src="https://github.com/user-attachments/assets/67ec5d37-97ff-4482-a7c6-0423dcfa725c" />
+
 > Peg ⌀ = 12mm
 > 
 > Peg Hole ⌀ = 12.2mm
-> 
+
+<img width="1315" height="790" alt="image" src="https://github.com/user-attachments/assets/14d953ab-88aa-4436-b601-700759946800" />
+
 > Washer Seat Inner ⌀ Offset from Peg Hole = 0.2mm
 > 
 > Washer Seat Outer ⌀ = 24.60mm
 > 
->> Improved rotational clearance, taking into account of PLA tolerance of ± 0.02mm.
+>> Improved rotational clearance, taking into account of FDM variational clearance (~ ±0.1 - ±0.3mm)
 
 → Joint - Peg:
+
+<img width="992" height="776" alt="image" src="https://github.com/user-attachments/assets/884ff8f1-c4e4-438f-a903-0b9176cb893b" />
+
 > Peg ⌀ = 9.90mm
 >
 > Hole ⌀ = 10.30mm
-> 
+>
 > Hole Offset from Inner Washer Seat = 0.2mm
 > 
 > Washer Seat Outer ⌀ = 20.70mm
 >
-> Clearance added to account for FDM hole shrinkage and dimensional variation.
+>> Clearance added to account for FDM hole shrinkage and dimensional variation.
 > 
->> Designed clearance: ~0.2–0.4 mm.
+>> Designed clearance: ~ ±0.2– ±0.4 mm.
 
 ## **Manufacturing Notes**
-→ Pivot holes designed with +0.6 mm clearance to compensate for FDM hole shrinkage. 
+→ Pivot holes designed with ±0.2 - ±0.4 mm clearance to compensate for FDM hole shrinkage. 
 > Clearance validated through test prints.
 
 → Washer recesses included to maintain flat bearing surfaces and reduce friction
@@ -144,6 +150,11 @@ between rotating components.
 leading to poor first-layer adhesion. 
 > Issue resolved through bed cleaning and offset adjustment.
 
+### **Printer Calibration Setup**
+→ For regular PLA, it should feel as if the nozzle is lightly brushing the paper. 
+
+→ For Matte PLA, the Z-offset should be lower to compensate for the filament's higher viscosity and ensuring that it sticks.
+
 ## **Lessons Learned**
 → Proper Z - offset for general FDM use. It should feel as if the nozzle is lightly brushing the paper; not pressing nor scratching it. 
 > Soft resistance, paper moves slowly, nozzle doesn't catch/tear it. 
@@ -151,8 +162,14 @@ leading to poor first-layer adhesion.
 ## **Next Steps**
 → Print and assemble the first full iteration of the joint. 
 
+→ Evaluate articulation smoothness and positional stability.
 
-→ Explore taking the joint to the next level. 
-> Next iteration should involve electronics, involve calculations stemming from conceptual understanding (torque, forward kinematics).
-> 
-→ Iterate using Python API to streamline assembly process. 
+→ Measure whether friction is sufficient to resist gravitational torque.
+
+Future iterations can explore:
+
+→ spring-assisted balancing
+
+→ improved joint tolerances
+
+→ electronically actuated motion
