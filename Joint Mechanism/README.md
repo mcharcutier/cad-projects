@@ -4,89 +4,114 @@
 
 This project aims to design a rotational joint mechanism inspired by an anglepoise lamp, allowing controlled 360° equatorial motion while maintaining positional stability without permanent locking features.
 
-## **Goals**
+## **Design Requirements**
 
-→ Allows 360° equatorial base rotation.
+• 360° equatorial rotation at the base
 
-→ Maintains arm stability without ratcheting or locking features.
+• Passive positional stability without ratcheting or locking features.
 
-→ Minimizes gravitational droop.
+• Resistance to gravitational droop
 
-→ Avoids permanent deformation under expected loads.
+• No permanent deformation under expected operating loads. 
 
 ## **Success Criteria**
 
-→ Designed friction joint to maintain angular position of both stnading arm and forearm under load. 
+•Friction-based joint designed to maintain angular position of both the standing arm and forearm under load, eliminating the need for spring-assisted balancing.
 
-→ Identified frictional torque as the primary holding mechanism, eliminating need for springs
+• Pivot hole diameters held to a tolerance of ±0.2 mm of nominal dimension.
+Full assembly achieved using only printed components and washers; no post-processing required.
 
-→ Printed pivot holes must be within ±0.2 mm of the intended diameter.
+> **Updated (4/16)**: Preload fastening system revised to incorporate metal M12 fasteners.
 
-→ All components must assemble using only the printed parts and washers,
-with no post-processing required.
->> 4/16: That was the initial success criteria; now preload fastening system includes metal M12 fasteners. 
+• Printed links must withstand normal handling and full articulation range without cracking or layer separation.
 
-→ Printed links must withstand normal handling and full articulation
-without cracking or layer separation.
-
-→ Washer seats must maintain flat contact surfaces that prevent
-lateral play during joint rotation.
+• Washer seats must maintain flat, perpendicular contact surfaces to prevent lateral play during joint rotation.
 
 ## **Process**
 
 ### **Conceptual Understanding**
-For this project, I chose to reference and anglepoise lamp joint mechanism, especially with the joint and the base of the system. The base allows the joint to move 360° equatorially. 
+This design references the anglepoise lamp joint architecture, particularly its base rotation and arm balancing mechanisms. 
 
-The anglepoint lamp joint typically utilizes a spring mechanism to balance the torque against gravity. Gravitational torque changes with angle, making the arms want to droop. By balancing the torque induced by gravity with friction, the arm "floats," preventing sudden jerks, making the relative position of the joint mechanism stable regardless of the angle. 
+The anglepoint lamp joint conventionally utilizes spring tension to counter the gravitational torque, which varies with arm angle, allowing the arm to remain stable at any position. This design utilizes a preloaded friction interface to resist gravitational torque, elimintating springs while maintaining positional stability. 
  
-### **Main Takeaways**
-→ Keep the COM closer to the base to prevent the joint from tipping over. 
+### **Key Design Principles Derived From Reference**
+• Keep the COM closer to the base to prevent tipping.
 
-→ Torque = mass x gravitational force x radius. It's important to reduce the torque induced by gravity. Some methods to reduce include:
+• Torque (𝝉 = m × g × r) must be minimized through geometry and mass distribution. Strategies include:
 
->> Make the forearm shorter.
->> 
->> Make the forearm lighter.
->> 
->> Centralize the mass near the radius.
->> 
->> Add mass to the base to prevent tipping.
->> 
->> Keep the hardware near the joints.
->> 
->> Include a defined friction choice to introduce the frictional torque necessary to counter the torque induced by gravity.
-
-### **Expected Assembly Steps**
-1. Insert pivot pins into base joints.
-   
-2. Place washers in recessed seats.
-   
-3. Attach forearm link.
-   
-4. Secure rotating components.
+> • Shortening forearm length
+>
+> • Reducing forearm mass
+> 
+> • Centralizing component mass near the joint axis
+>
+> • Adding ballast to the base
+> 
+> • Locating the hardware near the joints.
+>
+> • Include a defined friction choice to introduce the frictional torque necessary to counter the gravitational torque
 
 ## **Engineering Considerations**
 
-→ FDM printing typically produces undersized holes due to material shrinkage.
+• **FDM Behavior:** Undersized holes due to material shrinkage during cooling process. Additional clearance was included in pivot holes to compensate for this behavior.
 
-→ Additional clearance was included in pivot holes to compensate for this behavior.
+• **Bearing Surface Design:** Washer recesses were designed to provide flat bearing surfaces and reduce plastic-on-plastic wear.
 
-→ Washer recesses were designed to provide flat bearing surfaces and reduce plastic-on-plastic wear.
-
-→ Joint tolerances were selected to balance two competing requirements:
+• **Joint Tolerance Philosophy:** Joint tolerances were selected to balance:
 
 > smooth articulation.
    
 > sufficient friction to resist gravitational torque.
+
+### **Clearance Specifications**:
+
+• Standing Arm - Leg Peg:
+
+<img width="1315" height="790" alt="image" src="https://github.com/user-attachments/assets/67ec5d37-97ff-4482-a7c6-0423dcfa725c" />
+
+> Peg ⌀ = 12mm
+> 
+> Peg Hole ⌀ = 12.2mm
+
+<img width="1315" height="790" alt="image" src="https://github.com/user-attachments/assets/14d953ab-88aa-4436-b601-700759946800" />
+
+> Washer Seat Inner ⌀ Offset from Peg Hole = 0.2mm
+> 
+> Washer Seat Outer ⌀ = 24.60mm
+> 
+>> Improved rotational clearance, taking into account of FDM variational clearance (~ ±0.1 - ±0.3mm)
+
+• Joint - Peg:
+
+<img width="992" height="776" alt="image" src="https://github.com/user-attachments/assets/884ff8f1-c4e4-438f-a903-0b9176cb893b" />
+
+> Peg ⌀ = 9.90mm
+>
+> Hole ⌀ = 10.30mm
+>
+> Hole Offset from Inner Washer Seat = 0.2mm
+> 
+> Washer Seat Outer ⌀ = 20.70mm
+>
+>> Clearance added to account for FDM hole shrinkage and dimensional variation.
+> 
+>> Designed clearance: ~ ±0.2mm radial clearance.
   
 ## **Testing and Observations**
 
 ### **V.1.0** 
-→ Incorrect offset caused poor first-layer adhesion. 
 
-→ Printed bolts as fasteners. 
+• Full Print Assembly:
 
-→ No washer recesses.
+[Insert Image here]
+
+• Incorrect offset caused poor first-layer adhesion. 
+
+• Printed PLA bolts deformed at thread geometry prior to establishing any measurable preload — fastener material identified as the primary limiting variable.
+
+• Friction interface was never loaded; frictional torque capacity could not be evaluated.
+
+__Print Strategy Evaluation:__
 
 [Full Assembly Print:]
 >  Exceeds build plate dimensions
@@ -104,108 +129,56 @@ The anglepoint lamp joint typically utilizes a spring mechanism to balance the t
 >
 > Can print replacement components if damaged or ineffective to the design intent.
 
-### **Clearance Dimensions**:
-
-→ Standing Arm - Leg Peg:
-
-<img width="1315" height="790" alt="image" src="https://github.com/user-attachments/assets/67ec5d37-97ff-4482-a7c6-0423dcfa725c" />
-
-> Peg ⌀ = 12mm
-> 
-> Peg Hole ⌀ = 12.2mm
-
-<img width="1315" height="790" alt="image" src="https://github.com/user-attachments/assets/14d953ab-88aa-4436-b601-700759946800" />
-
-> Washer Seat Inner ⌀ Offset from Peg Hole = 0.2mm
-> 
-> Washer Seat Outer ⌀ = 24.60mm
-> 
->> Improved rotational clearance, taking into account of FDM variational clearance (~ ±0.1 - ±0.3mm)
-
-→ Joint - Peg:
-
-<img width="992" height="776" alt="image" src="https://github.com/user-attachments/assets/884ff8f1-c4e4-438f-a903-0b9176cb893b" />
-
-> Peg ⌀ = 9.90mm
->
-> Hole ⌀ = 10.30mm
->
-> Hole Offset from Inner Washer Seat = 0.2mm
-> 
-> Washer Seat Outer ⌀ = 20.70mm
->
->> Clearance added to account for FDM hole shrinkage and dimensional variation.
-> 
->> Designed clearance: ~ ±0.2mm radial clearance.
-
-OBSERVATIONS:
-• Full Print Assembly:
-
-[Insert Image here]
-
-→ Printed PLA bolts deformed at thread geometry prior to establishing measurable preload.
-
-→ The base is heavy enough to hold the joint system without it collapsing. 
-
-→ Fastener material identified as limiting variable — a metal preload fastening system required to establish sufficient clamping force at friction interface. 
-
-→ Friction interface was not loaded -> frictional torque capacity could not be measured. Can be fixed with a preload fastening system to connect the surfaces closer together. 
-
 ### **V.2.0** 
-• Full Print Assembly:
+• __Full Print Assembly__:
 
 [Insert Image here]
 
-• Gravitational Torque Values:
+• __Gravitational Torque Values & Analysis:__
 
 | Arm Component  | Length (mm) | Gravitational Torque Values ( N × m) | 
 | ------------- | --------- | ------------------------| 
 | Black Arm  | 220 mm  | .65 - 1.08 N × m| 
 | Forearm  |  185 mm  | .045 - .081 N × m | 
 
-→ Gravitational torque of black arm exceeded friction torque capacity by approximately 7–20x — black arm identified as beyond design load of PLA friction interface.
+• Gravitational torque of black arm exceeded friction torque capacity by approximately 7–20x — black arm identified as beyond design load of PLA friction interface.
 
-→ Replaced printed fasteners with M12 fastening system, which includes bolts, washers, and nuts for a more effective preload within the joint system. 
+• Replaced printed fasteners with M12 fastening system (bolts, washers, and nuts) for  sufficient clamping force at the friction interface.
 
-→ Black arm could not hold itself up with the current fastener system. Conducted torque analysis using the black arm as the primary articulating element rather than using the base. 
+• Black arm could not hold itself up with the current fastener system. Conducted torque analysis using the black arm as the primary articulating element rather than using the base. 
 
-→ Calculated a frictional torque between .05 - .15 N × m at the test load. The frictional torque value is within capacity of the gravitational torque at the joint.
+• Calculated a frictional torque between .05 - .15 N × m at the test load. The frictional torque value is within capacity of the gravitational torque at the joint.
 
-→ Washer system was designed for M10 fastening system but used M12 -> fundamental load mismatch. 
+• __Note:__ Washer system was designed for M10 fastening system but used M12 -> fundamental load mismatch that must be resolved in future iterations. 
 
 
 ## **Manufacturing Notes**
-→ Pivot holes designed with ±0.2 mm radial clearance to compensate for FDM hole shrinkage. 
+• Pivot holes designed with ±0.2 mm radial clearance to compensate for FDM hole shrinkage. 
 > Clearance validated through test prints.
 
-→ Washer recesses included to maintain flat bearing surfaces and reduce friction
+• Washer recesses included to maintain flat bearing surfaces and reduce friction
 between rotating components.
-> Recess depth: 0.2 mm.
+> Recess depth: 1.0 mm.
 
-→ Initial prints failed due to inadequate Z-offset calibration,
+• Initial prints failed due to inadequate Z-offset calibration,
 leading to poor first-layer adhesion. 
-> Issue resolved through bed cleaning and offset adjustment.
-
-### **Printer Calibration Setup**
-→ For regular PLA, it should feel as if the nozzle is lightly brushing the paper. 
-
-→ For Matte PLA, the Z-offset should be lower to compensate for the filament's higher viscosity and ensuring that it sticks.
+> Issue resolved through bed cleaning and offset adjustment. 
 
 ## **Lessons Learned**
-→ Proper Z - offset for general FDM use. It should feel as if the nozzle is lightly brushing the paper; not pressing nor scratching it. 
-> Soft resistance, paper moves slowly, nozzle doesn't catch/tear it. 
+• Printed polymer fasteners are insufficient to generate preload in friction-based joint systems under meaningful gravitational loads. Metal fasteners are required.
+
+• Hardware sizing must be matched to printed geometry from the outset; a washer-fastener mismatch (M10 seat, M12 bolt) introduces unintended load distribution and should be treated as a design error.
 
 ## **Next Steps**
-→ Print and assemble the first full iteration of the joint. 
+• Evaluate articulation smoothness and positional stability.
 
-→ Evaluate articulation smoothness and positional stability.
+• Measure whether friction is sufficient to resist gravitational torque.
 
-→ Measure whether friction is sufficient to resist gravitational torque.
+__Future Iterations:__
+• Redesign washer seats to match M12 fastener geometry.
 
-Future iterations can explore:
+• Investigate spring-assisted balancing to expand load capacity
 
-→ spring-assisted balancing
+• Refine joint tolerances based on assembled test data.
 
-→ improved joint tolerances
-
-→ electronically actuated motion
+• Explore electronically actuated motion as a long-term development path. 
