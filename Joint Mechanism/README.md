@@ -4,6 +4,16 @@
 
 This project aims to design a rotational joint mechanism inspired by an anglepoise lamp, allowing controlled 360° equatorial motion while maintaining positional stability without permanent locking features.
 
+__Skills & Tools:__
+
+• Autodesk Fusion (Parametric modeling, assembly, tolerancing)
+
+• FDM Fabrication (Elegoo Neptune 4, PLA Manufacturing)
+
+• Gravitational & Frictional Torque Analysis
+
+• Preload Fastening Systems
+
 ## **Design Requirements**
 
 • 360° equatorial rotation at the base
@@ -101,8 +111,6 @@ The anglepoint lamp joint conventionally utilizes spring tension to counter the 
 
 ### **V.1.0** 
 
-• Full Print Assembly:
-
 [Insert Image here]
 
 • Incorrect offset caused poor first-layer adhesion. 
@@ -113,7 +121,7 @@ The anglepoint lamp joint conventionally utilizes spring tension to counter the 
 
 __Print Strategy Evaluation:__
 
-[Full Assembly Print:]
+__Full Assembly Print:__
 >  Exceeds build plate dimensions
 > 
 > ~400g of filament, ~12 hours to complete printing
@@ -122,7 +130,7 @@ __Print Strategy Evaluation:__
 > 
 > Would need to reprint the entire assembly if an iteration is unsuccessful.
 
-[Component - Based Printing:]
+__Component - Based Printing:__
 > Will fit on the bed (excluding the Body-Base 2 due to the legs. The height can be reduced for it to properly print within the bounds of the printer.
 >
 > Will require more filament, but shorter print duration
@@ -150,7 +158,7 @@ __Print Strategy Evaluation:__
 • Calculated a frictional torque between .05 - .15 N × m at the test load. The frictional torque value is within capacity of the gravitational torque at the joint.
 
 • __Note:__ Washer system was designed for M10 fastening system but used M12 -> fundamental load mismatch that must be resolved in future iterations. 
-
+> Identified clearance gap within fastener stack → insufficient contact pressure at friction interface. Introduced PLA filament shim to take up slack and introduce controlled preload. 
 
 ## **Manufacturing Notes**
 • Pivot holes designed with ±0.2 mm radial clearance to compensate for FDM hole shrinkage. 
